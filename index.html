@@ -11,50 +11,69 @@
     <div class="container">
         <header>
             <h1>Matias Alvo</h1>
+            <div class="header-links">
+                <a href="assets/pdf/CV_Matias_Alvo.pdf" class="cv-link">📄 CV</a>
+                <a href="mailto:ma4177@columbia.edu">✉️ Email</a>
+                <a href="https://www.linkedin.com/in/matias-alvo/" target="_blank">🔗 LinkedIn</a>
+                <a href="https://github.com/MatiasAlvo" target="_blank">💻 GitHub</a>
+                <a href="https://scholar.google.com/citations?user=-SxhkAoAAAAJ&hl=en&oi=ao" target="_blank">🎓 Google Scholar</a>
+            </div>
             <nav>
                 <a href="#about">About</a>
                 <a href="#research">Research</a>
-                <a href="#code">Code</a>
-                <a href="#talks">Talks</a>
                 <a href="#publications">Publications</a>
-                <a href="#contact">Contact</a>
+                <a href="#experience">Experience</a>
+                <a href="#talks">Talks</a>
+                <a href="#teaching">Teaching</a>
             </nav>
         </header>
 
         <section id="about">
             <h2>About</h2>
             <p>
-                [Your brief bio here - PhD student/Researcher focusing on Deep Reinforcement Learning]
+                I am a fifth-year Ph.D. candidate in the Decision, Risk, and Operations division at Columbia Business School, 
+                advised by <a href="https://djrusso.github.io/" target="_blank">Dan Russo</a> and 
+                <a href="https://ykanoria.github.io/" target="_blank">Yash Kanoria</a>. My research focuses on sequential 
+                decision-making and reinforcement learning, with a particular interest in developing deep RL applications for 
+                operations problems.
             </p>
             <p>
-                My research focuses on developing reliable policy optimization methods for 
-                complex decision-making problems, with particular emphasis on inventory networks 
-                and discontinuous MDPs.
+                Previously, I interned as a Research Scientist at Etsy (improving ad ranking systems with 1.2% value increase) 
+                and as an Applied Scientist at Amazon (developing deep RL for inventory management). Before my Ph.D., I worked 
+                as an Associate at Boston Consulting Group.
+            </p>
+            <p>
+                In 2013, I achieved the highest nationwide score in Chile's standardized university admission tests (PSU), 
+                out of over 270,000 test-takers, earning a full scholarship to PUC Chile.
             </p>
         </section>
 
         <section id="research" class="featured-research">
-            <h2>Featured Research</h2>
+            <h2>Research Highlights</h2>
             
             <div class="paper-card featured">
                 <h3>Deep Reinforcement Learning for Inventory Networks: Toward Reliable Policy Optimization</h3>
-                <p class="authors">Matias Alvo, [Co-authors]</p>
-                <p class="venue">[Conference/Journal, Year]</p>
+                <p class="authors">Matias Alvo, Yash Kanoria, Dan Russo, Minuk Lee</p>
+                <p class="venue">RL4SN Workshop 2024, Amazon NYRL Workshop 2025 • <em>Submitted for journal publication</em></p>
                 <p class="abstract">
-                    [Brief description of your work on reliable policy optimization for inventory networks]
+                    We explore the reliable use of deep RL in inventory control and study Hindsight Differentiable Policy Optimization, 
+                    which uses stochastic gradient descent to optimize policy performance without requiring repeated deployment of 
+                    randomized policies. We outperform state-of-the-art model-free RL algorithms by up to 6.7% and common heuristics 
+                    by up to 22% on problems with real data. We also propose a Graph Neural Network architecture that reduces the 
+                    number of required samples by up to 64 times.
                 </p>
                 <div class="paper-links">
-                    <a href="assets/pdf/inventory_networks.pdf" class="btn">Paper</a>
-                    <a href="https://github.com/MatiasAlvo/[repo-name]" class="btn">Code</a>
-                    <a href="#" class="btn" onclick="showBibtex('inventory')">BibTeX</a>
-                    <a href="assets/pdf/inventory_slides.pdf" class="btn">Slides</a>
+                    <a href="https://arxiv.org/abs/2306.11246" class="btn" target="_blank">arXiv</a>
+                    <a href="https://github.com/MatiasAlvo/Neural_inventory_control" class="btn" target="_blank">Code</a>
+                    <a href="#" class="btn" onclick="showBibtex('inventory'); return false;">BibTeX</a>
                 </div>
                 <div id="inventory-bibtex" class="bibtex" style="display:none;">
                     <pre>
-@article{alvo2024inventory,
-  title={Deep Reinforcement Learning for Inventory Networks},
-  author={Alvo, Matias and ...},
-  year={2024}
+@article{alvo2023deep,
+  title={Deep Reinforcement Learning for Inventory Networks: Toward Reliable Policy Optimization},
+  author={Alvo, Matias and Kanoria, Yash and Russo, Dan and Lee, Minuk},
+  journal={arXiv preprint arXiv:2306.11246},
+  year={2023}
 }</pre>
                 </div>
             </div>
@@ -62,30 +81,80 @@
             <div class="paper-card featured">
                 <h3>Hybrid Policy Optimization in Discontinuous MDPs: Combining Pathwise and Model-Free Gradient Estimators</h3>
                 <span class="badge">Work in Progress</span>
-                <p class="authors">Matias Alvo, [Co-authors]</p>
+                <p class="authors">Matias Alvo</p>
                 <p class="abstract">
-                    [Brief description of your hybrid approach for discontinuous MDPs]
+                    Combining differentiable simulation with model-free RL methods (e.g., PPO) to efficiently solve 
+                    discontinuous MDPs. This approach leverages the strengths of both pathwise gradients where the 
+                    environment is differentiable and REINFORCE-style estimators where it is not.
                 </p>
                 <div class="paper-links">
-                    <a href="#" class="btn disabled">Paper (Coming Soon)</a>
-                    <a href="https://github.com/MatiasAlvo/[repo-name]" class="btn">Code</a>
+                    <a href="https://github.com/MatiasAlvo/hybrid-rl" class="btn" target="_blank">Code</a>
                 </div>
             </div>
         </section>
 
-        <section id="code">
-            <h2>Code Repositories</h2>
-            <div class="code-grid">
-                <div class="repo-card">
-                    <h4>🔧 Deep RL for Inventory Networks</h4>
-                    <p>Implementation of reliable policy optimization algorithms for multi-echelon inventory systems</p>
-                    <a href="https://github.com/MatiasAlvo/[repo]" class="repo-link">View on GitHub →</a>
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <div class="paper-card">
+                <h3>An Exact Solution Approach for an Electric Bus Dispatch Problem</h3>
+                <p class="authors">Matias Alvo, Mathias Klapp, Gustavo Angulo</p>
+                <p class="venue">Transportation Research Part E: Logistics and Transportation Review</p>
+                <p class="abstract">
+                    We propose a two-stage decomposition approach to plan the dispatch operations of an electric bus fleet, 
+                    considering energy and time constraints due to limited battery ranges and charging times. Our method can 
+                    optimally solve problems over 10 times larger than a direct approach (up to 250 trips and 27 buses).
+                </p>
+                <div class="paper-links">
+                    <a href="#" class="btn disabled">Paper (Journal Access)</a>
                 </div>
-                <div class="repo-card">
-                    <h4>🔧 Hybrid Policy Optimization</h4>
-                    <p>Combining pathwise derivatives and REINFORCE for discontinuous environments</p>
-                    <a href="https://github.com/MatiasAlvo/[repo]" class="repo-link">View on GitHub →</a>
+            </div>
+
+            <h3>Other Research Projects</h3>
+            <ul class="other-research">
+                <li>
+                    <strong>On the shortcomings of Lagrangian-based policies for weakly-coupled RL</strong> 
+                    (with Dan Russo and Yash Kanoria)<br>
+                    <span class="project-desc">Studied multi-agent problems with sub-MDPs coupled by aggregate action constraints, 
+                    highlighting limitations of resource-pricing coordination policies.</span>
+                </li>
+                <li>
+                    <strong>An Integrated Bin-Packing and Aircraft Routing Approach for Air Cargo Operations</strong> 
+                    (with A. Bombelli, F. Delgado, G. Angulo, B.F. Santos)<br>
+                    <span class="project-desc">Developed matheuristics for joint optimization of aircraft routing, Unit Load Device routing, 
+                    and cargo assignment.</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Industry Experience</h2>
+            
+            <div class="experience-card">
+                <div class="exp-header">
+                    <h3>Research Scientist Intern</h3>
+                    <span class="exp-company">Etsy</span>
+                    <span class="exp-date">June - September 2025</span>
                 </div>
+                <p>Improved ad ranking for marketplace auction system. Field experiments showed 1.2% increase in expected value of impressed listings.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="exp-header">
+                    <h3>Applied Scientist Intern</h3>
+                    <span class="exp-company">Amazon</span>
+                    <span class="exp-date">June - September 2023</span>
+                </div>
+                <p>Developed deep reinforcement learning algorithms to optimize inventory management and fulfillment decisions.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="exp-header">
+                    <h3>Associate</h3>
+                    <span class="exp-company">Boston Consulting Group</span>
+                    <span class="exp-date">June - December 2019</span>
+                </div>
+                <p>Developed management consulting projects for major companies in the banking and energy sectors.</p>
             </div>
         </section>
 
@@ -93,35 +162,66 @@
             <h2>Talks & Presentations</h2>
             <ul class="talks-list">
                 <li>
-                    <strong>[Talk Title 1]</strong><br>
-                    [Conference/Venue], [Date]<br>
-                    <a href="assets/pdf/talk1_slides.pdf">Slides</a>
+                    <strong>Deep Reinforcement Learning for Inventory Networks</strong><br>
+                    Amazon New York Reinforcement Learning Workshop, 2025<br>
+                    <a href="#" class="talk-link">Slides (Coming Soon)</a>
                 </li>
                 <li>
-                    <strong>[Talk Title 2]</strong><br>
-                    [Conference/Venue], [Date]<br>
-                    <a href="assets/pdf/talk2_slides.pdf">Slides</a>
+                    <strong>Deep Reinforcement Learning for Inventory Networks</strong><br>
+                    RL4SN Workshop, 2024<br>
+                    <a href="#" class="talk-link">Slides</a>
                 </li>
                 <li>
-                    <strong>[Talk Title 3]</strong><br>
-                    [Conference/Venue], [Date]<br>
-                    <a href="assets/pdf/talk3_slides.pdf">Slides</a>
-                </li>
-                <li>
-                    <strong>[Talk Title 4]</strong><br>
-                    [Conference/Venue], [Date]<br>
-                    <a href="assets/pdf/talk4_slides.pdf">Slides</a>
+                    <strong>[Add your other talks here]</strong><br>
+                    [Venue], [Date]<br>
                 </li>
             </ul>
         </section>
 
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <h3>Teaching Assistant at Columbia Business School</h3>
+            <ul>
+                <li><strong>Foundations of Stochastic Modeling</strong> (Ph.D. course)</li>
+                <li><strong>Managerial Statistics</strong> (MBA course)</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <h3>Columbia Business School</h3>
+                <p class="degree">Ph.D. in Decision, Risk and Operations • 2021 - 2026 (Expected)</p>
+                <p>GPA: 9.92/10</p>
+                <p><strong>Fellowships:</strong> Columbia GSB Doctoral Fellowship, Paul and Sandra Montrone Fellowship, Deming Doctoral Fellowship</p>
+            </div>
+
+            <div class="education-item">
+                <h3>Pontificia Universidad Católica de Chile</h3>
+                <p class="degree">Industrial Engineering Professional Title with Mathematical Engineering Diploma • 2013 - 2018</p>
+                <p>Ranked in top 8% • B.S. in Operations Research • Minor in Programming</p>
+                <p><strong>Honor:</strong> Beca PSU - Full scholarship for achieving the highest nationwide score in university admission tests</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <p><strong>Programming:</strong> Python (PyTorch, NumPy, Pandas, Scikit-learn, Keras), Gurobi, LaTeX</p>
+            <p><strong>Languages:</strong> Spanish (native), English (bilingual proficiency, TOEFL: 108/120)</p>
+        </section>
+
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: ma4177 [at] columbia [dot] edu</p>
             <p>
-                <a href="https://github.com/MatiasAlvo">GitHub</a> | 
-                <a href="https://scholar.google.com/citations?user=[your-id]">Google Scholar</a> |
-                <a href="https://www.linkedin.com/in/[your-profile]">LinkedIn</a>
+                <strong>Email:</strong> ma4177 [at] columbia [dot] edu<br>
+                <strong>Office:</strong> Columbia Business School, New York, NY
+            </p>
+            <p class="contact-links">
+                <a href="https://github.com/MatiasAlvo" target="_blank">GitHub</a> | 
+                <a href="https://www.linkedin.com/in/matias-alvo/" target="_blank">LinkedIn</a> |
+                <a href="https://scholar.google.com/citations?user=-SxhkAoAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a> |
+                <a href="assets/pdf/CV_Matias_Alvo.pdf">CV (PDF)</a>
             </p>
         </section>
     </div>

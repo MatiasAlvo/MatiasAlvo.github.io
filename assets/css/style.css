@@ -17,72 +17,131 @@ body {
     padding: 2rem;
 }
 
+/* Header Styling */
 header {
     margin-bottom: 3rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    color: #111;
+}
+
+.header-links {
+    display: flex;
+    gap: 1.2rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.header-links a {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.header-links a:hover {
+    color: #0066cc;
+}
+
+.cv-link {
+    font-weight: 600;
 }
 
 nav {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
 nav a {
     color: #0066cc;
     text-decoration: none;
     font-weight: 500;
+    font-size: 1.05rem;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
+nav a.active {
+    color: #0051a3;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Section Styling */
 section {
     margin-bottom: 3rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
     color: #111;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
 }
 
 h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #111;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #222;
 }
 
+p {
+    margin-bottom: 1rem;
+}
+
+/* Paper Cards */
 .paper-card {
     background: #f8f9fa;
     padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
     border-left: 4px solid #0066cc;
+    transition: box-shadow 0.2s;
+}
+
+.paper-card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .paper-card.featured {
     background: #f0f7ff;
     border-left-color: #0051a3;
+    border-left-width: 5px;
 }
 
 .authors {
     color: #666;
     margin-bottom: 0.5rem;
+    font-size: 0.95rem;
 }
 
 .venue {
     color: #666;
     font-style: italic;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.venue em {
+    color: #0066cc;
+    font-weight: 500;
+}
+
+.abstract {
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 1rem;
 }
 
 .badge {
@@ -96,6 +155,7 @@ h3 {
     margin-left: 0.5rem;
 }
 
+/* Paper Links */
 .paper-links {
     margin-top: 1rem;
     display: flex;
@@ -112,6 +172,7 @@ h3 {
     border-radius: 4px;
     font-size: 0.9rem;
     transition: background 0.2s;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -123,6 +184,7 @@ h3 {
     cursor: not-allowed;
 }
 
+/* BibTeX */
 .bibtex {
     margin-top: 1rem;
     background: #f0f0f0;
@@ -134,41 +196,82 @@ h3 {
 .bibtex pre {
     font-family: 'Courier New', monospace;
     font-size: 0.85rem;
+    margin: 0;
 }
 
-.code-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+/* Other Research */
+.other-research {
+    list-style: none;
+    margin-top: 1rem;
 }
 
-.repo-card {
+.other-research li {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 6px;
+    border-left: 3px solid #888;
+}
+
+.other-research strong {
+    color: #222;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.project-desc {
+    color: #555;
+    font-size: 0.95rem;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Experience Section */
+.experience-card {
     border: 1px solid #e0e0e0;
     padding: 1.5rem;
+    margin-bottom: 1.5rem;
     border-radius: 8px;
-    transition: box-shadow 0.2s;
+    background: #fafafa;
 }
 
-.repo-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.repo-card h4 {
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     margin-bottom: 0.75rem;
+    flex-wrap: wrap;
 }
 
-.repo-link {
+.exp-header h3 {
+    color: #111;
+    margin-bottom: 0;
+}
+
+.exp-company {
+    font-weight: 600;
     color: #0066cc;
-    text-decoration: none;
-    font-weight: 500;
+    font-size: 1.1rem;
 }
 
+.exp-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-left: auto;
+}
+
+.experience-card p {
+    color: #444;
+    margin-bottom: 0;
+}
+
+/* Talks Section */
 .talks-list {
     list-style: none;
 }
 
 .talks-list li {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     padding-left: 1.5rem;
     position: relative;
 }
@@ -178,18 +281,144 @@ h3 {
     position: absolute;
     left: 0;
     color: #0066cc;
+    font-weight: bold;
 }
 
+.talk-link {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.talk-link:hover {
+    text-decoration: underline;
+}
+
+/* Teaching Section */
+#teaching ul {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+#teaching li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+#teaching li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0066cc;
+}
+
+/* Education Section */
+.education-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.education-item h3 {
+    color: #0066cc;
+    margin-bottom: 0.5rem;
+}
+
+.degree {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Skills Section */
+#skills p {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+}
+
+#skills strong {
+    color: #0066cc;
+}
+
+/* Contact Section */
+#contact {
+    background: #f0f7ff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-links {
+    margin-top: 1rem;
+}
+
+.contact-links a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 0.5rem;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
     }
     
-    nav {
-        gap: 1rem;
+    h1 {
+        font-size: 1.8rem;
     }
     
-    .code-grid {
-        grid-template-columns: 1fr;
+    nav {
+        gap: 0.75rem;
+    }
+    
+    nav a {
+        font-size: 0.95rem;
+    }
+    
+    .header-links {
+        gap: 0.75rem;
+    }
+    
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .exp-date {
+        margin-left: 0;
+        margin-top: 0.25rem;
+    }
+}
+
+/* Link Styling */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Print Styles */
+@media print {
+    .header-links,
+    nav,
+    .btn,
+    .bibtex {
+        display: none;
+    }
+    
+    .paper-card {
+        page-break-inside: avoid;
     }
 }
