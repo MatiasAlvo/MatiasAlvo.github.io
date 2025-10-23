@@ -70,8 +70,11 @@
       </p>
       <p>
         Previously, I interned as a Research Scientist at the Ads Marketplace team at Etsy
-        and as an Applied Scientist at the Reinforcement Learning team at Amazon NYRL. Before my Ph.D., I worked
-        as an Associate at Boston Consulting Group. In 2013, I achieved the highest nationwide score in Chile's standardized university admission tests (PSU),
+        and as an Applied Scientist at the Reinforcement Learning team at Amazon. Before my Ph.D., I worked
+        as an Associate at Boston Consulting Group.
+      </p>
+      <p>  
+        In 2013, I achieved the highest nationwide score in Chile's standardized university admission tests (PSU),
         out of over 270,000 test-takers, earning a full scholarship to PUC Chile.
       </p>
     </section>
@@ -82,7 +85,8 @@
       <div class="paper-card featured">
         <h3>Deep Reinforcement Learning for Inventory Networks: Toward Reliable Policy Optimization</h3>
         <p class="authors">Matias Alvo, Yash Kanoria, Dan Russo, Minuk Lee</p>
-        <p class="venue">RL4SN Workshop 2024, Amazon NYRL Workshop 2025 • <em>Submitted for journal publication</em></p>
+        <p class="venue"><a href="https://indico.math.cnrs.fr/event/10541/">RL4SN Workshop 2024</a>, <a href="https://ny-rl.com/">Amazon NYRL Workshop 2025</a> • <em>Submitted for journal publication</em></p>
+
         <p class="abstract">
           We explore the reliable use of deep RL in inventory control and study Hindsight Differentiable Policy Optimization,
           which uses stochastic gradient descent to optimize policy performance without requiring repeated deployment of
@@ -112,9 +116,7 @@
         <span class="badge">Work in Progress</span>
         <p class="authors">Matias Alvo</p>
         <p class="abstract">
-          Combining differentiable simulation with model-free RL methods (e.g., PPO) to efficiently solve
-          discontinuous MDPs. This approach leverages the strengths of both pathwise gradients where the
-          environment is differentiable and REINFORCE-style estimators where it is not.
+            We develop a principled framework for reinforcement learning in environments with discontinuities, where standard pathwise gradient methods struggle. We introduce a modeling approach that explicitly captures the structure of such problems, enabling the use of pathwise gradients in regions where smoothness is available. Building on this framework, we propose methods that combine differentiable simulation with model-free gradient estimators, allowing us to leverage the strengths of both in a unified and theoretically grounded manner.
         </p>
         <div class="paper-links">
           <a href="https://github.com/MatiasAlvo/hybrid-rl" class="btn" target="_blank" rel="noopener noreferrer">Code</a>
@@ -135,7 +137,12 @@
           optimally solve problems over 10 times larger than a direct approach (up to 250 trips and 27 buses).
         </p>
         <div class="paper-links">
-          <a class="btn disabled" aria-disabled="true" role="button" tabindex="-1">Paper (Journal Access)</a>
+        <a href="https://www.sciencedirect.com/science/article/pii/S1366554521002878?casa_token=vLhPkihoUCMAAAAA:fLnfiNuVrY9O6fs_Feq0D4gr1MxoCYhY5tg3rT-43xpAIc_cuDOOrma4k54Uqs5NhcWacG4EsA"
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer">
+            Paper (Journal Access)
+         </a>
         </div>
       </div>
 
@@ -193,12 +200,12 @@
         <li>
           <strong>Deep Reinforcement Learning for Inventory Networks</strong><br>
           Amazon New York Reinforcement Learning Workshop, 2025<br>
-          <a class="talk-link" aria-disabled="true" role="link" tabindex="-1">Slides (Coming Soon)</a>
+          <!-- <a class="talk-link" aria-disabled="true" role="link" tabindex="-1">Slides (Coming Soon)</a> -->
         </li>
         <li>
           <strong>Deep Reinforcement Learning for Inventory Networks</strong><br>
           RL4SN Workshop, 2024<br>
-          <a href="#" class="talk-link" onclick="return false;">Slides</a>
+          <!-- <a href="#" class="talk-link" onclick="return false;">Slides</a> -->
         </li>
         <li>
           <strong>[Add your other talks here]</strong><br>
@@ -232,12 +239,6 @@
         <p>Ranked in top 8% • B.S. in Operations Research • Minor in Programming</p>
         <p><strong>Honor:</strong> Beca PSU - Full scholarship for achieving the highest nationwide score in university admission tests</p>
       </div>
-    </section>
-
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <p><strong>Programming:</strong> Python (PyTorch, NumPy, Pandas, Scikit-learn, Keras), Gurobi, LaTeX</p>
-      <p><strong>Languages:</strong> Spanish (native), English (bilingual proficiency, TOEFL: 108/120)</p>
     </section>
 
     <section id="contact">
