@@ -1,1 +1,131 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matias Alvo - Deep Reinforcement Learning Research</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Matias Alvo</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#code">Code</a>
+                <a href="#talks">Talks</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                [Your brief bio here - PhD student/Researcher focusing on Deep Reinforcement Learning]
+            </p>
+            <p>
+                My research focuses on developing reliable policy optimization methods for 
+                complex decision-making problems, with particular emphasis on inventory networks 
+                and discontinuous MDPs.
+            </p>
+        </section>
+
+        <section id="research" class="featured-research">
+            <h2>Featured Research</h2>
+            
+            <div class="paper-card featured">
+                <h3>Deep Reinforcement Learning for Inventory Networks: Toward Reliable Policy Optimization</h3>
+                <p class="authors">Matias Alvo, [Co-authors]</p>
+                <p class="venue">[Conference/Journal, Year]</p>
+                <p class="abstract">
+                    [Brief description of your work on reliable policy optimization for inventory networks]
+                </p>
+                <div class="paper-links">
+                    <a href="assets/pdf/inventory_networks.pdf" class="btn">Paper</a>
+                    <a href="https://github.com/MatiasAlvo/[repo-name]" class="btn">Code</a>
+                    <a href="#" class="btn" onclick="showBibtex('inventory')">BibTeX</a>
+                    <a href="assets/pdf/inventory_slides.pdf" class="btn">Slides</a>
+                </div>
+                <div id="inventory-bibtex" class="bibtex" style="display:none;">
+                    <pre>
+@article{alvo2024inventory,
+  title={Deep Reinforcement Learning for Inventory Networks},
+  author={Alvo, Matias and ...},
+  year={2024}
+}</pre>
+                </div>
+            </div>
+
+            <div class="paper-card featured">
+                <h3>Hybrid Policy Optimization in Discontinuous MDPs: Combining Pathwise and Model-Free Gradient Estimators</h3>
+                <span class="badge">Work in Progress</span>
+                <p class="authors">Matias Alvo, [Co-authors]</p>
+                <p class="abstract">
+                    [Brief description of your hybrid approach for discontinuous MDPs]
+                </p>
+                <div class="paper-links">
+                    <a href="#" class="btn disabled">Paper (Coming Soon)</a>
+                    <a href="https://github.com/MatiasAlvo/[repo-name]" class="btn">Code</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="code">
+            <h2>Code Repositories</h2>
+            <div class="code-grid">
+                <div class="repo-card">
+                    <h4>🔧 Deep RL for Inventory Networks</h4>
+                    <p>Implementation of reliable policy optimization algorithms for multi-echelon inventory systems</p>
+                    <a href="https://github.com/MatiasAlvo/[repo]" class="repo-link">View on GitHub →</a>
+                </div>
+                <div class="repo-card">
+                    <h4>🔧 Hybrid Policy Optimization</h4>
+                    <p>Combining pathwise derivatives and REINFORCE for discontinuous environments</p>
+                    <a href="https://github.com/MatiasAlvo/[repo]" class="repo-link">View on GitHub →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="talks">
+            <h2>Talks & Presentations</h2>
+            <ul class="talks-list">
+                <li>
+                    <strong>[Talk Title 1]</strong><br>
+                    [Conference/Venue], [Date]<br>
+                    <a href="assets/pdf/talk1_slides.pdf">Slides</a>
+                </li>
+                <li>
+                    <strong>[Talk Title 2]</strong><br>
+                    [Conference/Venue], [Date]<br>
+                    <a href="assets/pdf/talk2_slides.pdf">Slides</a>
+                </li>
+                <li>
+                    <strong>[Talk Title 3]</strong><br>
+                    [Conference/Venue], [Date]<br>
+                    <a href="assets/pdf/talk3_slides.pdf">Slides</a>
+                </li>
+                <li>
+                    <strong>[Talk Title 4]</strong><br>
+                    [Conference/Venue], [Date]<br>
+                    <a href="assets/pdf/talk4_slides.pdf">Slides</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: ma4177 [at] columbia [dot] edu</p>
+            <p>
+                <a href="https://github.com/MatiasAlvo">GitHub</a> | 
+                <a href="https://scholar.google.com/citations?user=[your-id]">Google Scholar</a> |
+                <a href="https://www.linkedin.com/in/[your-profile]">LinkedIn</a>
+            </p>
+        </section>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
